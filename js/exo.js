@@ -81,6 +81,24 @@ const profil ={
     const cesarPeopleBarHtmlElement=document.querySelector('#trends-cesar div')
     cesarPeopleBarHtmlElement.style.width=`${voteResult(1)}%`
     },
+    //Step11
+    showActivities:function(){
+        let panelactivitiesHtmlElement=document.getElementById('activities')
+        let listActivitiesHtmlElement=document.querySelector('.tasks')
+        panelactivitiesHtmlElement.classList.remove('hidden')
+        let i=0;
+        while (i<base.activities.length){
+            if (base.activities[i].author==='Hercule'){
+                if (base.activities[i].finished){
+                    let taskHtmlElement=document.createElement('li')
+                    taskHtmlElement.classList.add('task')
+                    taskHtmlElement.innerText=base.activities[i].title
+                    listActivitiesHtmlElement.appendChild(taskHtmlElement)
+                }
+            }
+            i++;
+        }
+    },
 
     init:function(){
         base.fillProfil(profil.hercule)
@@ -93,6 +111,7 @@ const profil ={
         profil.clickToggleBanner()
         profil.submitContact()
         profil.votefunction()
+        profil.showActivities()
     }
     
 }
