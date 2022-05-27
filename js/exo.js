@@ -10,3 +10,9 @@ let hercule = {
 }
 
 base.fillProfil(hercule)
+
+friends=[
+    'Jupiter', 'Junon', 'Alcmène', 'Déjanire',
+]
+base.printFriends(friends)
+base.setBestFriend(friends[0])
