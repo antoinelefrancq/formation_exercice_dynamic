@@ -29,3 +29,15 @@ const travaux=()=> {
     }
 }
 travaux()
+
+function dispo(heure){
+    let availabilityHtmlElement =document.getElementById('availability')
+    if (heure>=8 &&heure<=20){
+        availabilityHtmlElement.innerText='Disponible'
+        availabilityHtmlElement.classList.remove('off')
+    } else{
+        availabilityHtmlElement.innerText='Non disponible'
+        availabilityHtmlElement.classList.add('off')
+    }
+}
+dispo(base.getHour())
