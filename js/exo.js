@@ -1,6 +1,6 @@
 console.log('test 1...2...1...2');
 
-let hercule = {
+const hercule = {
     name:'Hercule',
     job:'Demi-Dieu',
     age:35,
@@ -42,6 +42,15 @@ function dispo(heure){
 }
 dispo(base.getHour())
 
-let pseudo=(firstName,departmentNumber)=>`${firstName}-du-${departmentNumber}`
+const pseudo=(firstName,departmentNumber)=>`${firstName}-du-${departmentNumber}`
 let profilNameHtmlElement=document.getElementById('profil-name')
 profilNameHtmlElement.innerText=(pseudo(hercule.name,hercule.department))
+
+const toggleBanner =()=>{
+    let headerHtmlElement = document.getElementById('header-banner')
+    headerHtmlElement.classList.toggle('banner--open')
+}
+
+let menuHtmlElement=document.getElementById('menu-toggler')
+menuHtmlElement.addEventListener('click',toggleBanner)
+
