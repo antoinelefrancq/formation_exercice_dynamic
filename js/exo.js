@@ -22,3 +22,10 @@ titleHtmlElement.classList.add('banner__title')
 titleHtmlElement.innerText=('Vous consultez le profil de Hercule')
 let bannerHtmlElement = document.getElementById('header-banner')
 bannerHtmlElement.appendChild(titleHtmlElement)
+
+const travaux=()=> {
+    for(i=0;i<11;i++){
+        base.displayWork(i)
+    }
+}
+travaux()
