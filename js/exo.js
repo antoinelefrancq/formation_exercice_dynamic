@@ -58,3 +58,21 @@ contactHtmlElement.addEventListener('submit',function(event){
     event.preventDefault()
     alert('Hercule ne souhaite pas être dérangé')
 })
+//Step10
+const voteResult=(indexResult)=>{
+let herculePercent = (base.vote.hercule)*100/((base.vote.hercule)+(base.vote.cesar))
+let cesarPercent = (base.vote.cesar)*100/((base.vote.hercule)+(base.vote.cesar))
+let percent=[
+    herculePercent, cesarPercent
+]
+return percent[indexResult]
+}
+const herculeTrendsHtmlElement=document.querySelector('#trends-hercule p')
+herculeTrendsHtmlElement.innerText=(`${voteResult(0)}%`)
+const herculePeopleBarHtmlElement=document.querySelector('#trends-hercule .people__bar')
+herculePeopleBarHtmlElement.style.width=`${voteResult(0)}%`
+
+const cesarTrendsHtmlElement=document.querySelector('#trends-cesar p')
+cesarTrendsHtmlElement.innerText=(`${voteResult(1)}%`)
+const cesarPeopleBarHtmlElement=document.querySelector('#trends-cesar div')
+cesarPeopleBarHtmlElement.style.width=`${voteResult(1)}%`
