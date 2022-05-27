@@ -41,3 +41,7 @@ function dispo(heure){
     }
 }
 dispo(base.getHour())
+
+let pseudo=(firstName,departmentNumber)=>`${firstName}-du-${departmentNumber}`
+let profilNameHtmlElement=document.getElementById('profil-name')
+profilNameHtmlElement.innerText=(pseudo(hercule.name,hercule.department))
