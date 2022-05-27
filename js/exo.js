@@ -16,3 +16,9 @@ friends=[
 ]
 base.printFriends(friends)
 base.setBestFriend(friends[0])
+
+let titleHtmlElement = document.createElement('h1')
+titleHtmlElement.classList.add('banner__title')
+titleHtmlElement.innerText=('Vous consultez le profil de Hercule')
+let bannerHtmlElement = document.getElementById('header-banner')
+bannerHtmlElement.appendChild(titleHtmlElement)
